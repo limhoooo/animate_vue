@@ -1,18 +1,23 @@
 <template>
   <div style="width: 100%; height: 100%">
-    <div
-      class="page"
-      style="padding-left: 7%; padding-top: 3%; background: black"
-    >
-      <h1
-        style="font-size: 6rem; color: white"
-        class="test1 animate__animated animate__backInLeft"
+    <div class="page" style="position: relative">
+      <div class="test123" style="width: 100%; height: 70%"></div>
+      <div
+        class="sss"
+        style="position: absolute; top: 5%; width: 100%; text-align: center"
       >
-        LimHo
-      </h1>
-      <h1 style="font-size: 5rem; line-height: 0; color: white" class="test2">
-        PortFolio
-      </h1>
+        <img
+          style="width: 45vw"
+          alt="mainTextBg"
+          src="./assets/mainTextBg.png"
+        />
+      </div>
+      <div style="padding-left: 7%; padding-top: 1%">
+        <h1 style="font-size: 2.5rem" class="test1">LimHo</h1>
+        <h1 style="font-size: 3.5rem; line-height: 0" class="test2">
+          PortFolio
+        </h1>
+      </div>
       <!-- <div>
       <router-link to="/about">aboat</router-link>
       <br />
@@ -51,7 +56,8 @@ body {
   width: 100%;
   height: 100%;
 }
-.test2 {
+.test2,
+.test1 {
   animation-name: bounce;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -73,5 +79,10 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+}
+.test123 {
+  background-image: url("./assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 </style>
