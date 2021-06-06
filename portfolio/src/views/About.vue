@@ -1,40 +1,57 @@
 <template>
   <div style="width: 100%; height: 100%">
-    <div class="page" style="position: relative">
-      <div class="test123" style="width: 100%; height: 70%"></div>
-      <div
-        class="sss"
-        style="position: absolute; top: 5%; width: 100%; text-align: center"
-      >
-        <img
-          style="width: 45vw"
-          alt="mainTextBg"
-          src="../assets/mainTextBg.png"
-        />
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <div class="section" style="position: relative">
+        <div class="page">
+          <div class="test123" style="width: 100%; height: 70%"></div>
+          <div
+            class="sss"
+            style="position: absolute; top: 0; width: 100%; text-align: center"
+          >
+            <img
+              style="width: 43vw; padding: 2vw"
+              alt="mainTextBg"
+              src="../assets/mainTextBg.png"
+              class="pulseAM"
+            />
+          </div>
+        </div>
       </div>
-      <div style="padding-left: 7%; padding-top: 1%">
-        <h1 style="font-size: 2.5rem" class="test1">LimHo</h1>
-        <h1 style="font-size: 3.5rem; line-height: 0" class="test2">
-          PortFolio
-        </h1>
+      <div class="section">
+        <div class="page"></div>
       </div>
-    </div>
-    <div style="background: blue" class="page">
-      <div id="sec1" data-aos="fade-up">
-        <h1 style="text-align: center; padding-top: 100px">ㅎㅇㅎㅇ</h1>
+      <div class="section">
+        <div class="page"></div>
       </div>
-    </div>
-    <div style="background: red" class="page">
-      <div id="sec2" data-aos="fade-up">
-        <h1 style="text-align: center">ㅎㅇㅎㅇ</h1>
+      <div class="section">
+        <div class="page"></div>
       </div>
-    </div>
+    </full-page>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from "vue";
-export default Vue.extend({});
+// import "fullpage.js/vendors/scrolloverflow"; // Optional. When using scrollOverflow:true
+// import "./fullpage.scrollHorizontally.min"; // Optional. When using fullpage extensions
+import VueFullPage from "vue-fullpage.js";
+
+Vue.use(VueFullPage);
+export default Vue.extend({
+  data: () => ({
+    options: {
+      licenseKey: "YOUR_KEY_HEERE",
+      anchors: ["page1", "page2", "page3", "page4"],
+      sectionsColor: ["", "#ff5f45", "#0798ec", "#ff5f45"],
+      navigation: true,
+      navigationPosition: "right",
+      navigationTooltips: ["1", "2", "3", "4"],
+      showActiveTooltip: true,
+      slidesNavigation: true,
+      slidesNavPosition: "bottom",
+    },
+  }),
+});
 </script>
 
 <style scoped>
@@ -76,5 +93,15 @@ export default Vue.extend({});
   background-image: url("../assets/bg.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+.pulseAM {
+  animation-name: pulse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+  animation-fill-mode: none;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
 }
 </style>

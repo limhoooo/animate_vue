@@ -1,55 +1,41 @@
 <template>
-  <div
-    class="animate__animated"
-    style="width: 100%; height: 100%; position: relative"
-  >
-    <transition
-      mode="out-in"
-      enter-active-class="animate__animated animate__fadeIn"
-      leave-active-class="animate__animated animate__fadeOutLeft"
-    >
-      <div
-        style="width: 100%; height: 50%; background: #333333"
-        v-if="menu2"
-      ></div>
-    </transition>
-    <transition
-      mode="out-in"
-      enter-active-class="animate__animated animate__fadeIn"
-      leave-active-class="animate__animated animate__fadeOutRight"
-    >
-      <div
-        style="width: 100%; height: 50%; background: blue"
-        v-if="menu2"
-      ></div>
-    </transition>
-    <span
-      @click="test111"
-      style="
-        position: absolute;
-        color: #fff;
-        font-size: 50px;
-        top: 20%;
-        left: 25%;
-      "
-      >포트폴리오 ㄱㄱ</span
-    >
+  <div class="pageBaseBox">
+    <first-page :prodsClass="prodsClassLeft" :firstPage="firstPage">
+      <div class="firstPageTextBox">
+        <h1>FRONT</h1>
+        <h1>END</h1>
+      </div>
+    </first-page>
+    <first-page :prodsClass="prodsClassRight" :firstPage="firstPage">
+      <div class="firstPageTextBox">
+        <h1>LIMHO</h1>
+        <h1>PORTFOLIO</h1>
+      </div>
+    </first-page>
+
+    <span @click="firstBtnFnc" class="fierstBtn bounceAM">Click Me.</span>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-
+import FirstPage from "../components/FirstPage.vue";
 export default Vue.extend({
   name: "Home",
-  components: {},
+  components: {
+    FirstPage,
+  },
   data: () => ({
-    menu1: false,
-    menu2: true,
+    firstPage: true,
+    prodsClassLeft: { animate: "animate__fadeOutLeft" },
+    prodsClassRight: {
+      animate: "animate__fadeOutRight",
+      textRight: "textRight",
+    },
   }),
   methods: {
-    test111() {
-      this.menu2 = !this.menu2;
+    firstBtnFnc() {
+      this.firstPage = !this.firstPage;
       this.$router.push("about");
     },
   },
@@ -57,7 +43,40 @@ export default Vue.extend({
 </script>
 
 <style>
-.test1 {
+.w100 {
+  width: 100%;
+}
+.h50 {
+  height: 50%;
+}
+.textRight {
+  text-align: right;
+}
+.pageBaseBox {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.firstPageTextBox h1 {
+  font-size: 8em;
+  line-height: 1.3em;
+  margin: 0;
+  color: #eee;
+}
+.firstPageTextBox {
+  height: 100%;
+}
+.fierstBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 100px;
+  margin: -50px 0 0 -80px;
+  font-size: 2em;
+  cursor: pointer;
+}
+.bounceAM {
   animation-name: bounce;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -68,3 +87,4 @@ export default Vue.extend({
   animation-fill-mode: forwards;
 }
 </style>
+
