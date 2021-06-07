@@ -86,5 +86,7 @@ export default Vue.extend({
   animation-delay: 2s;
   animation-fill-mode: forwards;
 }
+.test {
+}
 </style>
 

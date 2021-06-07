@@ -42,7 +42,7 @@ export default Vue.extend({
     options: {
       licenseKey: "YOUR_KEY_HEERE",
       anchors: ["page1", "page2", "page3", "page4"],
-      sectionsColor: ["", "#ff5f45", "#0798ec", "#ff5f45"],
+      sectionsColor: ["", "", "#0798ec", "#ff5f45"],
       navigation: true,
       navigationPosition: "right",
       navigationTooltips: ["1", "2", "3", "4"],
