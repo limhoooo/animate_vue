@@ -9,7 +9,7 @@
     <first-page :prodsClass="prodsClassRight" :firstPage="firstPage">
       <div class="firstPageTextBox">
         <h1>LIMHO</h1>
-        <h1>PORTFOLIO</h1>
+        <h1>PORTFOLIO11</h1>
       </div>
     </first-page>
 
