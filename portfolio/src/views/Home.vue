@@ -10,6 +10,14 @@
       <div class="firstPageTextBox">
         <h1>LIMHO</h1>
         <h1>PORTFOLIO11</h1>
+        <select multiple>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+          <option>1</option>
+        </select>
       </div>
     </first-page>
 
@@ -59,6 +67,11 @@ export default Vue.extend({
 }
 .firstPageTextBox h1 {
   font-size: 8em;
+  line-height: 1.3em;
+  line-height: 1.3em;
+  line-height: 1.3em;
+  line-height: 1.3em;
+  line-height: 1.3em;
   line-height: 1.3em;
   margin: 0;
   color: #eee;
