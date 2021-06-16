@@ -10,14 +10,7 @@
       <div class="firstPageTextBox">
         <h1>LIMHO</h1>
         <h1>PORTFOLIO11</h1>
-        <select multiple>
-          <option>1</option>
-          <option>1</option>
-          <option>1</option>
-          <option>1</option>
-          <option>1</option>
-          <option>1</option>
-        </select>
+       
       </div>
     </first-page>
 
